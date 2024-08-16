@@ -5,6 +5,7 @@ import { Badge, Tab, Tabs } from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
 import TvIcon from '@mui/icons-material/Tv';
 import { MutableRefObject } from 'react';
+import { Tabs as MenuTabs } from './components/Tabs/Tabs';
 import ClipIcon from '../../assets/icon/clip-icon.png';
 import { VideoCategory } from '../types/VideoCategory';
 import SceneEditor from './SceneEditor';
@@ -153,14 +154,7 @@ const Layout = (props: IProps) => {
 
   const getTabs = () => {
     return (
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          height: '100%',
-          borderRight: '1px solid black',
-        }}
-      >
+      <div className="flex flex-col h-full bg-background-layer-1">
         <Box
           sx={{
             justifyContent: 'flex-start',
@@ -168,7 +162,6 @@ const Layout = (props: IProps) => {
             flexDirection: 'column',
             flex: 1,
             alignItems: 'center',
-            backgroundColor: '#182035',
           }}
         >
           <Tabs
@@ -178,7 +171,6 @@ const Layout = (props: IProps) => {
             sx={{
               height: '100%',
               width: '100%',
-              backgroundColor: '#182035',
               boxSizing: 'border-box',
               color: 'white',
               '& .MuiTab-root.Mui-selected': {
@@ -206,7 +198,6 @@ const Layout = (props: IProps) => {
             flexDirection: 'column',
             flex: 1,
             alignItems: 'center',
-            backgroundColor: '#182035',
           }}
         >
           <Tabs
@@ -215,7 +206,6 @@ const Layout = (props: IProps) => {
             onChange={handleChangePage}
             sx={{
               width: '100%',
-              backgroundColor: '#182035',
               boxSizing: 'border-box',
               color: 'white',
               '& .MuiTab-root.Mui-selected': {
@@ -228,7 +218,7 @@ const Layout = (props: IProps) => {
             {renderSceneTab()}
           </Tabs>
         </Box>
-      </Box>
+      </div>
     );
   };
 
@@ -264,7 +254,10 @@ const Layout = (props: IProps) => {
         width: '100%',
       }}
     >
-      {getTabs()}
+      {/* {getTabs()} */}
+      <MenuTabs value="" orientation="vertical">
+        Tabs here
+      </MenuTabs>
       {page === Pages.Settings && renderSettingsPage()}
       {page === Pages.SceneEditor && renderSceneEditor()}
       {page === Pages.None && renderCategoryPage()}

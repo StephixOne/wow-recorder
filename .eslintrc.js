@@ -9,6 +9,12 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'no-plusplus': 'off',
     'no-console': 'off',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto', // stops prettier complaining about windows line-endings
+      },
+    ],
   },
   parserOptions: {
     ecmaVersion: 2020,

@@ -3,6 +3,10 @@
  *        See https://github.com/webpack-contrib/sass-loader#imports
  */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
   margin: 0px;
   height: 100%;
@@ -37,9 +41,6 @@ div#root {
 
 #title-bar-btns {
   -webkit-app-region: no-drag;
-  position: fixed;
-  top: 1px;
-  right: 0px;
 }
 
 #title-bar-btns button {
@@ -64,12 +65,6 @@ div#root {
 .center {
   border: 5px solid #ffff00;
   text-align: center;
-}
-
-#logo {
-  position: fixed;
-  top: 5px;
-  left: 5px;
 }
 
 .status-buttons {

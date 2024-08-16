@@ -322,6 +322,7 @@ const CategoryPage = (props: IProps) => {
         justifyContent: 'center',
         height: '100%',
         width: '100%',
+        borderTopLeftRadius: '6px',
       }}
     >
       {haveVideos && getVideoPlayer()}

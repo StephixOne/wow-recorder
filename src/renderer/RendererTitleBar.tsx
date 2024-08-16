@@ -1,4 +1,3 @@
-import { Box } from '@mui/material';
 import React from 'react';
 import icon from '../../assets/icon/small-icon.png';
 
@@ -26,21 +25,16 @@ export default function RendererTitleBar() {
   }, []);
 
   return (
-    <Box
+    <div
       id="title-bar"
-      sx={{
-        borderBottom: '1px solid black',
-        height: '35px',
-        width: '100%',
-        boxSizing: 'border-box',
-        backgroundColor: '#182035',
-        zIndex: 1,
-      }}
+      className="w-full h-[35px] bg-background-layer-1 flex items-center justify-between px-2 pr-0"
     >
-      <div id="logo">
+      <div>
         <img alt="icon" src={icon} height="25px" width="25px" />
       </div>
-      <div id="title">{title}</div>
+      <div className="text-primary text-sm text-center font-semibold">
+        {title}
+      </div>
       <div id="title-bar-btns">
         <button id="min-btn" type="button" onClick={clickedHide}>
           🗕
@@ -52,6 +46,6 @@ export default function RendererTitleBar() {
           ✖
         </button>
       </div>
-    </Box>
+    </div>
   );
 }

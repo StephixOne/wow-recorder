@@ -7,6 +7,6 @@ export enum VideoCategory {
   SoloShuffle = 'Solo Shuffle',
   MythicPlus = 'Mythic+',
   Raids = 'Raids',
-  Battlegrounds = 'Battlegrounds',
+  Battlegrounds = 'BGs',
   Clips = 'Clips',
 }
